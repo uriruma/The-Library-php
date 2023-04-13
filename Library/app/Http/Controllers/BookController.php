@@ -122,7 +122,7 @@ class BookController extends Controller
     public function search(Request $request)
     {
         $search = $request->input('search');
-        dd($search);
+        // dd($search);
         $books = Book::where('title', 'like', '%'.$search.'%')
                     ->orWhere('author', 'like', '%'.$search.'%')
                     ->orWhere('isbn', 'like', '%'.$search.'%')
